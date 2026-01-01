@@ -1,3 +1,5 @@
 spring:
   application:
     name: ChiTownStudentApartments
+server:
+  port: 8081
