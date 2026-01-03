@@ -1,17 +1,20 @@
 package com.y_aswin.ChiTownStudentApartments;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
-public class Apartments {
+public class Apartment {
+
+    @Id
     private String id;
     private String name;
     private int rent;
 
-    public Apartments() {
+    public Apartment() {
     }
 
-    public Apartments(String id, String name, int rent) {
+    public Apartment(String id, String name, int rent) {
         this.id = id;
         this.name = name;
         this.rent = rent;
