@@ -1,6 +1,12 @@
 package com.y_aswin.ChiTownStudentApartments;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Apartment {
+
+    @Id
     private String id;
     private String name;
     private int rent;
