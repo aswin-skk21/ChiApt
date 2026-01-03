@@ -1,5 +1,8 @@
 package com.y_aswin.ChiTownStudentApartments;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class College {
     private String id;
     private String name;

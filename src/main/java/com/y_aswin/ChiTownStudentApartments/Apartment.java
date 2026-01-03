@@ -1,14 +1,14 @@
 package com.y_aswin.ChiTownStudentApartments;
 
-public class Apartment {
+public class Apartments {
     private String id;
     private String name;
     private int rent;
 
-    public Apartment() {
+    public Apartments() {
     }
 
-    public Apartment(String id, String name, int rent) {
+    public Apartments(String id, String name, int rent) {
         this.id = id;
         this.name = name;
         this.rent = rent;
