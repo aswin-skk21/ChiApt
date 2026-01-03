@@ -1,0 +1,23 @@
+services:
+  db:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: yash
+      POSTGRES_PASSWORD: Akshaya123@
+      POSTGRES_DB: APT
+      PGDATA: /data/postgres
+    volumes:
+      - db_volume:/data/postgres
+    ports:
+      - "5332:5432"
+    networks:
+      - db_net
+    restart: unless-stopped
+
+networks:
+  db_net:
+    driver: bridge
+
+volumes:
+  db_volume:
