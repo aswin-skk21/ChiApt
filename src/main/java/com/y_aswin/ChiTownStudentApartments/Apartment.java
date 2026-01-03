@@ -1,14 +1,18 @@
 package com.y_aswin.ChiTownStudentApartments;
 
-public class Apartments {
+import jakarta.persistence.Id;
+
+public class Apartment {
+
+    @Id
     private String id;
     private String name;
     private int rent;
 
-    public Apartments() {
+    public Apartment() {
     }
 
-    public Apartments(String id, String name, int rent) {
+    public Apartment(String id, String name, int rent) {
         this.id = id;
         this.name = name;
         this.rent = rent;
