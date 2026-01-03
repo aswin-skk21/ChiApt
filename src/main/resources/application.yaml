@@ -1,5 +1,19 @@
 spring:
   application:
     name: ChiTownStudentApartments
+  datasource:
+    url: jdbc:postgresql://localhost:5332/APT
+    username: yash
+    password: Akshaya123@
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
 server:
   port: 8081
