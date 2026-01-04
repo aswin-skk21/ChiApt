@@ -7,20 +7,20 @@ import jakarta.persistence.Id;
 public class Apartment {
 
     @Id
-    private String id;
+    private int id;
     private String name;
     private int rent;
 
     public Apartment() {
     }
 
-    public Apartment(String id, String name, int rent) {
+    public Apartment(int id, String name, int rent) {
         this.id = id;
         this.name = name;
         this.rent = rent;
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 
