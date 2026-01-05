@@ -2,6 +2,7 @@ package com.y_aswin.ChiTownStudentApartments.Services;
 
 import com.y_aswin.ChiTownStudentApartments.Entities.Apartment;
 import com.y_aswin.ChiTownStudentApartments.Entities.College;
+import com.y_aswin.ChiTownStudentApartments.Repositories.CollegeRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,11 +10,10 @@ import java.util.List;
 @Service
 public class CollegeService {
 
-    private final CollegeService collegeService;
+    private final CollegeRepository collegeRepository;
 
-
-    public CollegeService(CollegeService collegeService) {
-        this.collegeService = collegeService;
+    public CollegeService(CollegeRepository collegeRepository) {
+        this.collegeRepository = collegeRepository;
     }
 
     public List<College> getAllColleges() {
