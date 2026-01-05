@@ -16,9 +16,13 @@ public class CollegeService {
         this.collegeService = collegeService;
     }
 
-    public void getAllColleges() {
+    public List<College> getAllColleges() {
+        return null;
     }
 
     public void insertApartment(Apartment apt) {
+    }
+
+    public void insertCollege(College clg) {
     }
 }
