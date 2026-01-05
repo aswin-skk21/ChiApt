@@ -5,6 +5,7 @@ import com.y_aswin.ChiTownStudentApartments.Entities.College;
 import com.y_aswin.ChiTownStudentApartments.Services.ApartmentService;
 import com.y_aswin.ChiTownStudentApartments.Services.CollegeService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,7 @@ public class CollegeController {
 
     }
 
+    @PostMapping
     public void addNewCollege(College clg) {
         collegeService.insertCollege(clg);
     }
