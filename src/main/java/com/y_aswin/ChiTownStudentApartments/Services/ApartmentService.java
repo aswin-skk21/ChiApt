@@ -1,5 +1,7 @@
-package com.y_aswin.ChiTownStudentApartments;
+package com.y_aswin.ChiTownStudentApartments.Services;
 
+import com.y_aswin.ChiTownStudentApartments.Entities.Apartment;
+import com.y_aswin.ChiTownStudentApartments.Repositories.ApartmentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +15,11 @@ public class ApartmentService {
         this.apartmentRepository = apartmentRepository;
     }
 
-    public List<Apartment> getApartments() {
+    public List<Apartment> getAllApartments() {
             return apartmentRepository.findAll();
+    }
+
+    public void insertApartment(Apartment apt) {
+        apartmentRepository.save(apt);
     }
 }
