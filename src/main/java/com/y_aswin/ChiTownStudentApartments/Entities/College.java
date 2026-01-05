@@ -1,4 +1,4 @@
-package com.y_aswin.ChiTownStudentApartments;
+package com.y_aswin.ChiTownStudentApartments.Entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
