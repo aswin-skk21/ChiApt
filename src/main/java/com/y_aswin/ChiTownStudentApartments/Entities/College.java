@@ -21,7 +21,7 @@ public class College {
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return this.id;
     }
 
