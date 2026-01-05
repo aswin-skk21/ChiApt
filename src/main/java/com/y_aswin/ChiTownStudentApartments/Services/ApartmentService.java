@@ -12,14 +12,17 @@ public class ApartmentService {
     private final ApartmentRepository apartmentRepository;
 
     public ApartmentService(ApartmentRepository apartmentRepository) {
+
         this.apartmentRepository = apartmentRepository;
     }
 
     public List<Apartment> getAllApartments() {
-            return apartmentRepository.findAll();
+
+        return apartmentRepository.findAll();
     }
 
     public void insertApartment(Apartment apt) {
+
         apartmentRepository.save(apt);
     }
 }
