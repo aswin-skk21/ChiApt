@@ -16,7 +16,7 @@ public class College {
     public College() {
     }
 
-    public College(String id, String name) {
+    public College(int id, String name) {
         this.id = id;
         this.name = name;
     }
