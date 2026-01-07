@@ -1,6 +1,7 @@
 package com.y_aswin.ChiTownStudentApartments.Services;
 
 import com.y_aswin.ChiTownStudentApartments.Entities.Apartment;
+import com.y_aswin.ChiTownStudentApartments.Entities.College;
 import com.y_aswin.ChiTownStudentApartments.Repositories.ApartmentRepository;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,9 @@ public class ApartmentService {
     public void insertApartment(Apartment apt) {
 
         apartmentRepository.save(apt);
+    }
+
+    public List<College> getApartmentByCollege(Integer id) {
+        return apartmentRepository.getApartmentsById(id);
     }
 }

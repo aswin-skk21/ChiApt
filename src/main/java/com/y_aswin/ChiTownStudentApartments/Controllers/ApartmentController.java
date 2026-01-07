@@ -1,6 +1,7 @@
 package com.y_aswin.ChiTownStudentApartments.Controllers;
 
 import com.y_aswin.ChiTownStudentApartments.Entities.Apartment;
+import com.y_aswin.ChiTownStudentApartments.Entities.College;
 import com.y_aswin.ChiTownStudentApartments.Services.ApartmentService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +27,10 @@ public class ApartmentController {
 
     public void addNewApartment(Apartment apt) {
         apartmentService.insertApartment(apt);
+    }
+
+    public List<College> getApartmentByCollege(Integer id) {
+        return apartmentService.getApartmentByCollege(id);
     }
 
 }
