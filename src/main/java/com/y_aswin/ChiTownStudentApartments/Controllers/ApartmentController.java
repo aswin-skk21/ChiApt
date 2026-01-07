@@ -30,7 +30,7 @@ public class ApartmentController {
         apartmentService.insertApartment(apt);
     }
 
-
+    @GetMapping("/filter")
     public List<College> getApartmentByCollege(@RequestParam Integer id) {
         return apartmentService.getApartmentByCollege(id);
     }
