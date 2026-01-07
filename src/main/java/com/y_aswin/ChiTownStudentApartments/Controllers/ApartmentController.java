@@ -5,6 +5,7 @@ import com.y_aswin.ChiTownStudentApartments.Entities.College;
 import com.y_aswin.ChiTownStudentApartments.Services.ApartmentService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -29,7 +30,8 @@ public class ApartmentController {
         apartmentService.insertApartment(apt);
     }
 
-    public List<College> getApartmentByCollege(Integer id) {
+
+    public List<College> getApartmentByCollege(@RequestParam Integer id) {
         return apartmentService.getApartmentByCollege(id);
     }
 
