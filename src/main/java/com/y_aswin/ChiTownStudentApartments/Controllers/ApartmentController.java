@@ -21,7 +21,18 @@ public class ApartmentController {
     }
 
     @GetMapping
-    public List<Apartment> getApartments() {
+    public List<Apartment> getApartments(
+            @RequestParam(required = false) Integer collegeId,
+            @RequestParam(required = false) Integer bathrooms,
+            @RequestParam(required = false) Integer bedrooms,
+            @RequestParam(required = false) Integer priceMin,
+            @RequestParam(required = false) Integer priceMax) {
+
+        if (collegeId != null || bathrooms != null || bedrooms != null ||
+                priceMin != null || priceMax != null) {
+            return apartmentService.filterApartments(collegeId, bathrooms, bedrooms, priceMin, priceMax);
+        }
+
         return apartmentService.getAllApartments();
 
     }

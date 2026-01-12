@@ -30,4 +30,9 @@ public class ApartmentService {
     public List<College> getApartmentByCollege(Integer id) {
         return apartmentRepository.getApartmentsById(id);
     }
+
+    public List<Apartment> filterApartments(Integer collegeId, Integer bathrooms, Integer bedrooms,
+                                            Integer priceMin, Integer priceMax) {
+        return apartmentRepository.findWithFilters(collegeId, bathrooms, bedrooms, priceMin, priceMax);
+    }
 }
